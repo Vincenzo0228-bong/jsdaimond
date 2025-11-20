@@ -3,16 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRISM FLUX - Digital Innovation Studio</title>
+    <title>JS Diamond</title>
+    <!-- Favicon / App icons (using existing logo.png) -->
+    <link rel="icon" type="image/png" sizes="42x42" href="images/icon.png">
     <link rel="stylesheet" href="templatemo-prism-flux.css">
-<!-- 
-
-TemplateMo 600 Prism Flux
-
-https://templatemo.com/tm-600-prism-flux
-
--->
-    <!-- logo ripple styles moved to templatemo-prism-flux.css -->
 </head>
 <body>
     <!-- Loading Screen -->
@@ -302,5 +296,36 @@ https://templatemo.com/tm-600-prism-flux
         </div>
     </footer>
 <script src="templatemo-prism-scripts.js"></script>
+<!-- Contact form: build mailto from fields and open mail client on submit -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Extract recipient from the form action (supports mailto:someone@example.com)
+        const rawAction = (form.getAttribute('action') || '').trim();
+        let recipient = rawAction.startsWith('mailto:') ? rawAction.slice(7) : rawAction;
+        if (!recipient) recipient = 'jsboss0807@gmail.com';
+
+        // Read field values
+        const nameVal = document.getElementById('name')?.value || '';
+        const fromEmailVal = document.getElementById('email')?.value || '';
+        const subjectVal = document.getElementById('subject')?.value || 'Contact Form';
+        const messageVal = document.getElementById('message')?.value || '';
+
+        // Compose body text including the sender email so recipient sees it
+        const bodyText = `Name: ${nameVal}\nEmail: ${fromEmailVal}\n\n${messageVal}`;
+
+        // Build mailto link with proper encoding
+        const mailtoLink = `mailto:${encodeURIComponent(recipient)}?subject=${encodeURIComponent(subjectVal)}&body=${encodeURIComponent(bodyText)}`;
+
+        // Open user's mail client with composed message
+        window.location.href = mailtoLink;
+    });
+});
+</script>
 </body>
 </html>
