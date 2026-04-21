@@ -35,45 +35,17 @@ https://templatemo.com/tm-600-prism-flux
             },
             {
                 id: 4,
-                title: 'Embedded Systems',
-                description: 'We ensure seamless integration between devices and software with low-level optimization, efficient communication and enterprise-grade reliability.',
-                image: 'images/device3.jpg',
-                tech: ['Arduino', 'STM32F1', 'RS485', 'CAN']
-            },
-            {
-                id: 5,
                 title: 'Image Processing',
                 description: 'We deliver advanced image processing solutions with precise computer vision algorithms, real-time data pipelines and intelligent visual systems built for performance and scalability.',
                 image: 'images/imageprocessing2.jpg',
                 tech: ['Python', 'TensorFlow', 'Matlab']
             },
             {
-                id: 6,
+                id: 5,
                 title: 'AI & ML',
                 description: 'We modernize legacy systems with deep software analysis, enterprise-level security enhancements and complete firmware evaluation and adaptation.',
                 image: 'images/Ai1.webp',
                 tech: ['Python', 'TensorFlow', 'LLM Integration']
-            },
-            {
-                id: 7,
-                title: 'Game Development',
-                description: 'We create high-performance game experiences supported by optimized code, smooth multiplayer systems, cross-platform development and production-ready pipelines.',
-                image: 'images/game5.jpg',
-                tech: ['Unreal Engine', 'Unity']
-            },
-            {
-                id: 8,
-                title: 'Reverse Engineering',
-                description: 'We deliver deep reverse-engineering solutions with precise system analysis, secure code reconstruction and robust modernization tailored to complex software environments.',
-                image: 'images/reverse2.jpg',
-                tech: ['C++', 'Assembly', 'Debugging']
-            },
-            {
-                id: 9,
-                title: 'Security',
-                description: 'We deliver smart, resilient security built on proactive analysis and enterprise-grade protection.',
-                image: 'images/security.jpg',
-                tech: ['Access Control Systems', 'Intrusion Detection & Alarms']
             }
         ];
 
